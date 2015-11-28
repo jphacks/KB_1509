@@ -1,0 +1,19 @@
+import subprocess
+
+def detect():
+    """Detects qr code from camera and returns string that represents that code.
+
+    return -- qr code from image as string
+    """
+    subprocess.call(["raspistill -n -t 1 -w 120 -h 120 -o cam.png"],shell=True)
+    process = subprocess.Popen(["zbarimg -D cam.png"], stdout=subprocess.PIPE, shell=True)
+    (out, err) = process.communicate()
+
+    qr_code = None
+
+    # out looks like "QR-code: Xuz213asdY" so you need
+    # to remove first 8 characters plus whitespaces
+    if len(out) > 8:
+        qr_code = out[8:].strip()
+
+    return qr_code
