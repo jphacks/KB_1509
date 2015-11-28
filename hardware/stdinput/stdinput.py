@@ -7,7 +7,8 @@ import urllib2
 
 print('start')
 
-serverURL = 'http://192.168.128.46:8888/'
+#serverURL = 'http://192.168.128.46:8888/'
+serverURL = 'http://localhost/post-test/'
 
 id = 0
 
