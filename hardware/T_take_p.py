@@ -1,8 +1,9 @@
 import time
 import picamera
 
+
 with picamera.PiCamera() as camera:
     camera.resolution = (1024, 768)
     camera.start_preview()
-    time.sleep(2) #ƒJƒƒ‰‰Šú‰»
-    camera.capture('foo.jpg')
+    time.sleep(2) #ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    camera.capture('barcode.jpg')
