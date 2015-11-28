@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: MyString
+  book_name: MyString
+  book_author: MyString
+  book_lang: MyString
+  book_summry: MyText
+  book_image_url: MyString
+
+two:
+  isbn: MyString
+  book_name: MyString
+  book_author: MyString
+  book_lang: MyString
+  book_summry: MyText
+  book_image_url: MyString
