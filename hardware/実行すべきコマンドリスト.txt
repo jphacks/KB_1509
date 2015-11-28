@@ -1,3 +1,6 @@
+#GPIO_setup
+sudo apt-get install python-rpi.gpio
+
 #camera_setup
 sudo apt-get update
 sudo apt-get upgrade
