@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-     resources :users
+    root 'users#index'
+     resources :users, path: 'user'
      get 'update' => 'recordes#save_recorde'
 end

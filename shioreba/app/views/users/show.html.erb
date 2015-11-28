@@ -1,1 +1,11 @@
-<%= @user.name%>
+<h1><%= @user.name%></h1>
+
+<ul>
+  <% @user_recordes.each do |r| %>
+    <li><%= r.book.book_name %> ( <%= r.date  %> )</li>
+  <% end %>
+</ul>
+
+<%= link_to '戻る', root_path %>
+
+
