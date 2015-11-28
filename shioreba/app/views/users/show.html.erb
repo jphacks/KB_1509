@@ -2,7 +2,7 @@
 
 <ul>
   <% @user_recordes.each do |r| %>
-    <li><%= r.book.book_name %> ( <%= r.date  %> )</li>
+    <li><%= r.book.book_name %> ( <%= r.date  %> )<br/> <%= image_tag r.book.book_image_url %></li>
   <% end %>
 </ul>
 

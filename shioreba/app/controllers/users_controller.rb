@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_recordes = Recode.where(user_id: params[:id]).order(date: :desc)
+    @user_recordes = Recode.where(user_id: params[:id]).order(date: :desc, id: :desc)
   end
 
 end
