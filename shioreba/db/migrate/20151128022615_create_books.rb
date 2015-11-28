@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :book_name
       t.string :book_author
       t.string :book_lang
-      t.text :book_summry
+      t.text :book_summary
       t.string :book_image_url
 
       t.timestamps null: false
