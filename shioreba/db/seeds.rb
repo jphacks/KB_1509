@@ -5,6 +5,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Book.create(:isbn => "9784780802047", :book_name => "おにぎりレシピ101", :book_author => "山田　玲子", :book_lang => "jpn", :book_summary => "", :book_image_url => "http://hanmoto.com/bd/img/9784780802047.jpg")
+Book.get_info('9784774176987') # 1 機械学習
+Book.get_info('9784621061220') # 2 パターン認識と機械学習 上
+
 User.create(:name => "石塚大貴")
-Recode.create(:book_id => "1", :date => "2015-11-29", :user_id => "1")
+User.create(:name => "井手優太")
+User.create(:name => "杉下大河")
+User.create(:name => "水谷厚樹")
+
+Recode.create(:book_id => "1", :date => "2015-11-28", :user_id => "1")
+Recode.create(:book_id => "2", :date => "2015-11-28", :user_id => "1")
+Recode.create(:book_id => "2", :date => "2015-11-28", :user_id => "2")
