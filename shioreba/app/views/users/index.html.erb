@@ -1,0 +1,6 @@
+<h1>生徒一覧</h1>
+<% @users.each do |user| %>
+  <ul id="user_index">
+    <li><%= link_to user.name, user_path(user.id)%></li>
+  </ul>
+<% end %>
