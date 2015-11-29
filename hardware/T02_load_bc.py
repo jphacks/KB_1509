@@ -13,7 +13,7 @@ scanner.parse_config('enable')
  
 # obtain image data
 pil = Image.open(argv[1]).convert('L')
-width, height = pil.siz[0], pil.siz[1]
+width, height = pil.size[0], pil.size[1]
 raw = pil.tostring()
  
 # wrap image data
