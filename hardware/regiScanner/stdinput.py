@@ -9,7 +9,8 @@ import os
 import RPi.GPIO as GPIO
 
 #serverURL = 'http://192.168.128.46:8888/'
-serverURL = 'http://localhost/post-test/'
+#erverURL = 'http://localhost/post-test/'
+serverURL = 'https://thawing-harbor-3873.herokuapp.com/update'
 user_id = 3
 
 PIN = 18

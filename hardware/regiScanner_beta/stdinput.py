@@ -7,7 +7,8 @@ import datetime
 import os
 
 #serverURL = 'http://192.168.128.46:8888/'
-serverURL = 'http://localhost/post-test/'
+#serverURL = 'http://localhost/post-test/'
+serverURL = 'https://thawing-harbor-3873.herokuapp.com/update'
 
 user_id = 3
 
