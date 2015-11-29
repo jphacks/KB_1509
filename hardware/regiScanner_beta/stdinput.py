@@ -62,8 +62,8 @@ def send(): # POST送信
 
     if len(record) == 0 :    # レコードに配列が存在しない
         print('All data was sended')
-        exit()
+        return(0)
 
 while True:
     scan()
-#    send()
+    send()
