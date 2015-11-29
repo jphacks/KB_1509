@@ -12,7 +12,7 @@ GPIO.setup(PIN, GPIO.IN)
 
 while True:
     if GPIO.input(PIN):
-        GPIO.output(23, True)
+        GPIO.output(OUT_PIN, True)
         time.sleep(2)
-        GPIO.output(23, False)
+        GPIO.output(OUT_PIN, False)
         time.sleep(2)

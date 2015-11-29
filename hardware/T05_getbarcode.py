@@ -20,7 +20,7 @@ def getbarcode():
 
     # obtain image data
     pil = Image.open(barcode.jpg).convert('L')
-    width, height = pil.size
+    width, height = pil.size[0], pil.size[1]
     raw = pil.tostring()
 
     # wrap image data
