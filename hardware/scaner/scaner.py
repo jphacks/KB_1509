@@ -36,9 +36,9 @@ while True:
     print(res)  #
     print('end')
 
-    dic={"id":id, "date":"2015-11-24", "time":"2:05", "ISBN":inputISBN}
+#    dic={"id":id, "date":"2015-11-24", "time":"2:05", "ISBN":inputISBN}
 
     #JSONファイル書き込み
-    with open('hist.json', 'a') as f:
-        json.dump(dic, f, sort_keys=True, indent=4)
+#    with open('hist.json', 'a') as f:
+#        json.dump(dic, f, sort_keys=True, indent=4)
 
