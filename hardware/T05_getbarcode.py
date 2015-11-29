@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import zbar
-import Image
+from PIL import Image
 import time
 import picamera
 
@@ -11,32 +11,23 @@ def getbarcode():
         camera.start_preview()
         time.sleep(2)
         camera.capture('barcode.jpg')
-
     # create a reader
     scanner = zbar.ImageScanner()
-
     # configure the reader
     scanner.parse_config('enable')
-
     # obtain image data
-    pil = Image.open(barcode.jpg).convert('L')
+    pil = Image.open('bar.jpeg').convert('L')
     width, height = pil.size[0], pil.size[1]
     raw = pil.tostring()
-
     # wrap image data
     image = zbar.Image(width, height, 'Y800', raw)
-
     # scan the image for barcodes
     scanner.scan(image)
-
-    # extract results
+    # clean up
     for symbol in image:
         # do something useful with results
-        print 'decoded', symbol.type, 'symbol', '"%s"' % symbol.data
-
-    # clean up
-    del(image)
+        #print 'decoded', symbol.type, 'symbol', '"%s"' % symbol.data
     return symbol.data
 
-codenum = getbarcode();
+codenum = getbarcode()
 print '"%s"' % codenum
