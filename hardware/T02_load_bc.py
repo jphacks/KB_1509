@@ -4,7 +4,7 @@ import zbar
 from PIL import Image
  
 if len(argv) < 2: exit(1)
- 
+
 # create a reader
 scanner = zbar.ImageScanner()
  
@@ -13,7 +13,7 @@ scanner.parse_config('enable')
  
 # obtain image data
 pil = Image.open(argv[1]).convert('L')
-width, height = pil.siz
+width, height = pil.siz[0], pil.siz[1]
 raw = pil.tostring()
  
 # wrap image data
