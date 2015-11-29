@@ -1,10 +1,9 @@
 #!/usr/bin/python
-
 import zbar
+
 from PIL import Image
 import time
 import picamera
-
 def getbarcode():
     with picamera.PiCamera() as camera:
         camera.resolution = (1024, 768)
@@ -24,9 +23,6 @@ def getbarcode():
     # scan the image for barcodes
     scanner.scan(image)
     # clean up
-    for symbol in image:
-        # do something useful with results
-        #print 'decoded', symbol.type, 'symbol', '"%s"' % symbol.data
     return symbol.data
 
 codenum = getbarcode()
