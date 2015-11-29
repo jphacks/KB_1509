@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+#wrapper {
+  width: 700px;
+  margin: 30px auto;
+}
+
+#wrapper img.logo {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  #wrapper {
+    width: 100%;
+  }
+
+}
+
+#wrapper h1 {
+  text-align: center;
+  border-bottom: 2px solid #6699CC;
+}
+
+
