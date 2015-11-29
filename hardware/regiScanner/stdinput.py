@@ -29,10 +29,10 @@ def scan(): #jsonで保存
 
     # JSONファイル書き込み
     # JSON読み込み
-    if os.path.exists('record.json') :
+    if os.path.exists('record.json') :  #  ファイルが存在
         with open('record.json', 'r') as f:
             record = json.load(f)
-    else :
+    else :  #存在しない
         record = []
 
 
@@ -58,16 +58,19 @@ def scan(): #jsonで保存
  #       json.dump(dic, f, sort_keys=True, indent=4)
 
 def send(): # POST送信
+    # JSON読み込み
+    if os.path.exists('record.json') :  #  ファイルが存在
+        with open('record.json', 'r') as f:
+            record = json.load(f)
+    else :  #存在しない
+        record = []
 
-
-#    f = open('record.json', 'r')
-#    record = f.read()
-#    f.close()
+    dic = record.pop(0)
 
     postData = {
-        'date' : date,
+        'date' : dic['date'],
         'user_id' : 1192,
-        'book_isbn' : inputISBN
+        'book_isbn' : dic['book_isbn']
     }
     params = urllib.urlencode(postData)   # パーセントエンコード
     print('encoded')
@@ -75,8 +78,15 @@ def send(): # POST送信
     print(res)  #
     print('end')
 
+    # JSON書き込み
+    with open('record.json', 'w') as f:
+        json.dump(record, f, sort_keys=True, indent=2)
+
+    if len(record) == 0 :    # レコードに配列が存在しない
+        exit()
+
 
 while True:
-    scan()
-#    send()
+#    scan()
+    send()
 
