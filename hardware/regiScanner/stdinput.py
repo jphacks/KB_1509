@@ -1,13 +1,24 @@
 #coding:utf-8
+#!/usr/bin/python
 __author__ = 'atsu'
 
 import json
 import urllib
 import datetime
 import os
+import RPi.GPIO as GPIO
 
 #serverURL = 'http://192.168.128.46:8888/'
 serverURL = 'http://localhost/post-test/'
+user_id = 3
+
+PIN = 18
+OUT_PIN = 23
+
+# GPIO設定？
+GPIO.setmode(GPIO.BCM)#set GPIO pin number
+GPIO.setup(OUT_PIN, GPIO.OUT)
+GPIO.setup(PIN, GPIO.IN)
 
 print('deamon(?) start')
 
@@ -49,7 +60,7 @@ def send(): # POST送信
 
     postData = {
         'date' : dic['date'],
-        'user_id' : 1192,
+        'user_id' : user_id,
         'book_isbn' : dic['book_isbn']
     }
     params = urllib.urlencode(postData)   # パーセントエンコード
@@ -62,8 +73,9 @@ def send(): # POST送信
 
     if len(record) == 0 :    # レコードに配列が存在しない
         print('All data was sended')
-        exit()
+        return(0)
 
 while True:
     scan()
-    send()
+    if GPIO.input(PIN):
+        send()
