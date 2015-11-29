@@ -66,4 +66,4 @@ def send(): # POST送信
 
 while True:
     scan()
-#    send()
+    send()

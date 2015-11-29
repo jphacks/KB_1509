@@ -9,6 +9,8 @@ import os
 #serverURL = 'http://192.168.128.46:8888/'
 serverURL = 'http://localhost/post-test/'
 
+user_id = 3
+
 print('deamon(?) start')
 
 
@@ -49,7 +51,7 @@ def send(): # POST送信
 
     postData = {
         'date' : dic['date'],
-        'user_id' : 1192,
+        'user_id' : user_id,
         'book_isbn' : dic['book_isbn']
     }
     params = urllib.urlencode(postData)   # パーセントエンコード
