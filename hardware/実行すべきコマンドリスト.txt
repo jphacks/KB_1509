@@ -13,9 +13,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #Z-ber
-sudo apt-get install libzbar0
-sudo apt-get install zbar-tools
-sudo apt-get install python-zbar
+sudo apt-get install libzbar0 zbar-tools python-zbar
 
 
 #opencv 

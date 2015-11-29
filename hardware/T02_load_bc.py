@@ -1,7 +1,7 @@
 #!/usr/bin/python
 from sys import argv
 import zbar
-import Image
+from PIL import Image
  
 if len(argv) < 2: exit(1)
  
@@ -13,7 +13,7 @@ scanner.parse_config('enable')
  
 # obtain image data
 pil = Image.open(argv[1]).convert('L')
-width, height = pil.size
+width, height = pil.siz
 raw = pil.tostring()
  
 # wrap image data
