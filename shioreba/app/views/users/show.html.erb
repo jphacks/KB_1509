@@ -1,5 +1,7 @@
 <h1><%= @user.name%></h1>
-
+<div id="img_area">
+	
+</div>
 <ul>
   <% @user_recordes.each do |r| %>
     <li><%= r.book.book_name %> ( <%= r.date  %> )<br/> <%= image_tag r.book.book_image_url %></li>
