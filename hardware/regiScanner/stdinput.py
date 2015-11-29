@@ -5,6 +5,7 @@ import json
 import urllib
 import urllib2
 import datetime
+import os
 
 print('start')
 
@@ -28,14 +29,19 @@ def scan(): #jsonで保存
 
     # JSONファイル書き込み
     # JSON読み込み
-#    with open('record.json', 'r') as f:
-#        record = json.load(f)
+    if os.path.exists('record.json') :
+        with open('record.json', 'r') as f:
+            record = json.load(f)
+    else :
+        record = []
+
+
 
 #    f = open('record.json', 'r')
 #    record = json.load(f)
 #    print type(record)
 
-    record = []
+#    record = []
     dic={"date":date, "book_isbn":inputISBN}    # 追加辞書オブジェクト
     record.append(dic)   # 配列に追加
 
