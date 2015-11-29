@@ -56,7 +56,7 @@ def send(): # POST送信
         'book_isbn' : dic['book_isbn']
     }
     params = urllib.urlencode(postData)   # パーセントエンコード
-    res = urllib.urlopen(serverURL, + params).read()   # POST送信
+    res = urllib.urlopen(serverURL + params).read()   # POST送信
     print(res)  #
 
     # JSON書き込み
