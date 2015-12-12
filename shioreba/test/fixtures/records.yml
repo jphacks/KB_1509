@@ -3,9 +3,9 @@
 one:
   user_id: 
   book_id: 
-  date: 2015-11-28
+  read_date: 2015-12-10
 
 two:
   user_id: 
   book_id: 
-  date: 2015-11-28
+  read_date: 2015-12-10

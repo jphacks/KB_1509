@@ -5,13 +5,13 @@ one:
   book_name: MyString
   book_author: MyString
   book_lang: MyString
-  book_summry: MyText
-  book_image_url: MyString
+  book_summary: MyText
+  book_img_url: MyString
 
 two:
   isbn: MyString
   book_name: MyString
   book_author: MyString
   book_lang: MyString
-  book_summry: MyText
-  book_image_url: MyString
+  book_summary: MyText
+  book_img_url: MyString
