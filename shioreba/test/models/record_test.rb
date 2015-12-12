@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BookControllerTest < ActionController::TestCase
+class RecordTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

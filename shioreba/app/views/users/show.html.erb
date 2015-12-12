@@ -1,7 +1,6 @@
 <h1><%= @user.name%></h1>
-
 <div id="charactor">
-  <% case @user_recordes.count %>
+  <% case @user_records.count %>
     <% when 0..2 then %>
       <%= image_tag 'level1' %><br/>
       レベル１<br/>
@@ -17,13 +16,10 @@
   <% end %>
 </div>
 
-
 <ul>
-  <% @user_recordes.each do |r| %>
-    <li><%= r.book.book_name %> ( <%= r.date  %> )<br/> <%= image_tag r.book.book_image_url %></li>
+  <% @user_records.each do |r| %>
+    <li><%= r.book.book_name %> ( <%= r.read_date  %> )<br/> <%= image_tag r.book.book_img_url %></li>
   <% end %>
 </ul>
 
 <%= link_to '戻る', root_path %>
-
-
